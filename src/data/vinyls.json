@@ -1,0 +1,114 @@
+
+
+[
+
+    {
+            "id": 1,
+            "title": "Amanecer Buho",
+            "description": "cuarto álbum de la banda uruguaya de rock alternativo Buenos Muchachos",
+            "price": 20,
+            "discountPercentage": 10,
+            "stock": 14,
+            "category": "Rock",
+            "thumbnail": "https://littlebutterflyrecords.com/cdn/shop/products/BUHOFRENTE-11x11ORIGINAL_2000x.jpg?v=1620682112",
+            "images": [
+
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Nathy Peluso",
+            "description": "Calambre es el primer álbum de estudio de la cantante, compositora y rapera argentina Nathy Peluso.",
+            "price": 30,
+            "discountPercentage": 10,
+            "stock": 34,
+            "category": "Hip-Hop",
+            "thumbnail": "https://cdn.smehost.net/sonymusices-45pressprod/wp-content/uploads/2020/09/Calambre-Nathy-Peluso-portada.png",
+            "images": [
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Superficie de Placer",
+            "description": "Superficies de placer es el séptimo disco de la banda argentina de rock Virus, grabado en Río de Janeiro y mezclado en Nueva York entre abril y agosto de 1987.",
+            "price": 25,
+            "discountPercentage": 10,
+            "stock": 36,
+            "category": "Rock",
+            "thumbnail": "https://img.discogs.com/K2uBkCzMBsF3-39HcKj5rnlHv3g=/fit-in/500x500/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3115846-1386813419-7051.jpeg.jpg?w=640",
+            "images": [
+            ]
+          },
+          {
+            "id": 4,
+            "title": "Scarlet",
+            "description": "Scarlet es el cuarto álbum de estudio de la cantante y rapera estadounidense Doja Cat",
+            "price": 40,
+            "discountPercentage": 5,
+            "stock": 12,
+            "category": ["Rap", "Hip-Hop", "R&B"],
+            "thumbnail": "https://m.media-amazon.com/images/I/41LrtXaJJeL._UXNaN_FMjpg_QL85_.jpg",
+            "images": [
+            ]
+          },
+          {
+            "id": 5,
+            "title": "Final Cut",
+            "description": "es el duodécimo álbum de estudio de la banda británica de rock progresivo Pink Floyd. Se lanzó al mercado en marzo de 1983",
+            "price": 40,
+            "discountPercentage": 10,
+            "stock": 32,
+            "category": "Rock",
+            "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_833902-MLU69642139617_052023-O.webp",
+            "images": [
+            ]
+          },
+          {
+            "id": 6,
+            "title": "Parte de la Religion",
+            "description": "Parte de la Religión es el cuarto álbum de estudio en solitario del músico argentino Charly García.",
+            "price": 25,
+            "discountPercentage": 10,
+            "stock": 25,
+            "category": "Rock",
+            "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_947213-MLU69167097571_042023-O.webp",
+            "images": [
+            ]
+          },
+          {
+            "id": 7,
+            "title": "Red Moon In Venus",
+            "description": "Red Moon in Venus es el tercer álbum de estudio de la cantante colomboestadounidense Kali Uchis.",
+            "price": 30,
+            "discountPercentage": 5,
+            "stock": 20,
+            "category": ["R&B", "Soul"],
+            "thumbnail": "https://www.lahiguera.net/musicalia/artistas/kali_uchis/disco/12729/portada-m.jpg",
+            "images": [
+            ]
+          },
+          {
+            "id": 8,
+            "title": "¿Donde estan los ladrones?",
+            "description": "¿Dónde están los ladrones? es el cuarto álbum de estudio de la cantante colombiana Shakira, publicado el 29 de septiembre de 1998 ",
+            "price": 35,
+            "discountPercentage": 10,
+            "stock": 8,
+            "category": ["Rock", "Pop"],
+            "thumbnail": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/09/29131153/Shakira-Donde-estan-los-ladrones.jpg",
+            "images": [
+            ]
+          },
+          {
+            "id": 9,
+            "title": "Ancient Dreams in a Modern Land ",
+            "description": "Ancient Dreams in a Modern Land es el quinto álbum de estudio de la cantautora británica Marina, publicado mundialmente el 11 de junio de 2021 por el sello discográfico Atlantic Records",
+            "price": 30,
+            "discountPercentage": 10,
+            "stock": 6,
+            "category": "Pop",
+            "thumbnail": "https://www.lahiguera.net/musicalia/artistas/marina_diamandis/disco/11191/marina_diamandis_ancient_dreams_in_a_modern_land-portada.jpg",
+            "images": [
+            ]
+          }
+        ]
