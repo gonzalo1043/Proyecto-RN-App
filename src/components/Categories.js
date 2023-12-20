@@ -3,14 +3,18 @@ import categories from "../data/categories.json"
 import CategoryItem from './CategoryItem'
 import { colors } from '../global/colors'
 
-const Categories = ({setCategorySelected}) => {
+const Categories = ({navigation, route}) => {
 return (
     <View style= {styles.background}>
         <FlatList
     style= {styles.container}
     data= {categories}
     keyExtractor= {item => item}
-    renderItem = {({item}) => <CategoryItem setCategorySelected = {setCategorySelected} category = {item}/>}
+    renderItem = {({item}) => <CategoryItem 
+                                            navigation = {navigation}                               
+                                            category = {item}
+                                            route={route}
+                                            />}
     />
     </View>
     

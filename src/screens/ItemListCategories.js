@@ -7,7 +7,9 @@ import { useEffect, useState } from 'react'
 import { colors } from '../global/colors'
 
 
-const ItemListCategories = ({category}) => {
+const ItemListCategories = ({navigation, route}) => {
+
+  const {category} = route.params
   
   const [keyword, setKeyword] = useState('')
   const [vinyls, setVinyls] = useState(allVinyls)
@@ -25,13 +27,15 @@ const ItemListCategories = ({category}) => {
 
   return (
     <>
-    <Header title = {category}/>
     <Search setKeyword = {setKeyword}/>
     <FlatList
     style = {styles.container}
     data = {vinyls}
     keyExtractor = {item => item.id}
-    renderItem={({item}) => <VinylItem item = {item}/>}
+    renderItem={({item}) => <VinylItem
+                                      item = {item}
+                                      navigation = {navigation}
+                                      />}
     />
     </>
   )

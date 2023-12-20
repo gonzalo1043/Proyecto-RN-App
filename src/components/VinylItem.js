@@ -1,16 +1,16 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, Pressable, Image } from 'react-native'
 import { colors } from '../global/colors'
 
-const VinylItem = ({item}) => {
+const VinylItem = ({item, navigation}) => {
   return (
-    <View style= {styles.container}>
+    <Pressable style= {styles.container} onPress={() => navigation.navigate("Product", { id: item.id }) }>
         <Image
         style= {styles.image}
         resizeMode='cover'
         source = {{uri: item.thumbnail}}
         />
         <Text style= {styles.text}>{item.title}</Text>
-    </View>
+    </Pressable>
   )
 }
 

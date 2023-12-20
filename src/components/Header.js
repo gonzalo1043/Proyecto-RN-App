@@ -1,28 +1,28 @@
-import { StyleSheet, Text, View } from 'react-native'
-import {colors} from '../global/colors.js'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { colors } from '../global/colors';
 
-const Header = ({title = 'VV VYNIL'}) => {
+const Header = ({ title }) => {
   return (
-    <View style = {styles.container}>
-      <Text style = {styles.text}>{title}</Text>
+    <View style={styles.header}>
+      <Text style={styles.title}>{title}</Text>
     </View>
-  )
-}
-
-export default Header
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: colors.orange,
-        width: '100%',
-        height: 80,
-        justifyContent: 'center', 
-        alignItems: 'center', 
-    },
-    text: {
-        paddingTop: 25,
-        fontSize: 35,
-        fontFamily: 'HedvigLetterSerif',
-        color: colors.black
-    }
-})
+  header: {
+    backgroundColor: colors.orange, 
+    padding: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 40
+  },
+  title: {
+    fontSize: 24,
+    color: colors.black,
+    fontWeight: 'bold',
+  },
+});
+
+export default Header;
