@@ -1,29 +1,20 @@
-import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
-import Header from '../components/Header'
+import { FlatList, StyleSheet} from 'react-native'
 import Search from '../components/Search'
-import allVinyls from '../data/vinyls.json'
 import VinylItem from '../components/VinylItem'
 import { useEffect, useState } from 'react'
 import { colors } from '../global/colors'
-
+import { useDispatch, useSelector } from 'react-redux'
 
 const ItemListCategories = ({navigation, route}) => {
 
-  const {category} = route.params
-  
+  const productsFilteredByCategory = useSelector(state => state.shop.value.productsFilteredByCategory)
   const [keyword, setKeyword] = useState('')
-  const [vinyls, setVinyls] = useState(allVinyls)
+  const [vinyls, setVinyls] = useState([])
 
   useEffect(() => {
-    if(category) {
-      const vinylsCategory = allVinyls.filter( v => v.category === category)
-      const vinylsFiltered = vinylsCategory.filter( v => v.title.includes(keyword))
+      const vinylsFiltered = productsFilteredByCategory.filter( v => v.title.includes(keyword))
     setVinyls(vinylsFiltered)
-    } else {
-      const vinylsFiltered = allVinyls.filter( v => v.title.includes(keyword))
-    setVinyls(vinylsFiltered)
-    }
-  }, [keyword])
+  }, [keyword, productsFilteredByCategory])
 
   return (
     <>

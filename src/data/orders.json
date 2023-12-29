@@ -1,0 +1,68 @@
+[
+    {
+        "id":1,
+        "userId":1,
+        "createdAt": 1679869276580 ,
+        "items":[
+            {
+                "id": 8,
+                "title": "¿Donde estan los ladrones?",
+                "description": "¿Dónde están los ladrones? es el cuarto álbum de estudio de la cantante colombiana Shakira, publicado el 29 de septiembre de 1998 ",
+                "price": 35,
+                "discountPercentage": 10,
+                "stock": 8,
+                "category": ["Rock", "Pop"],
+                "thumbnail": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/09/29131153/Shakira-Donde-estan-los-ladrones.jpg",
+                "images": [
+                ],
+                "quantity": 3
+                },
+                {
+                "id": 9,
+                "title": "Ancient Dreams in a Modern Land ",
+                "description": "Ancient Dreams in a Modern Land es el quinto álbum de estudio de la cantautora británica Marina, publicado mundialmente el 11 de junio de 2021 por el sello discográfico Atlantic Records",
+                "price": 30,
+                "discountPercentage": 10,
+                "stock": 6,
+                "category": "Pop",
+                "thumbnail": "https://www.lahiguera.net/musicalia/artistas/marina_diamandis/disco/11191/marina_diamandis_ancient_dreams_in_a_modern_land-portada.jpg",
+                "images": [
+                ], 
+                "quantity": 2
+                }
+        ]
+    },
+    {
+        "id":2,
+        "userId":2,
+        "createdAt": 1679969279580,
+        "items":[
+            {
+                "id": 8,
+                "title": "¿Donde estan los ladrones?",
+                "description": "¿Dónde están los ladrones? es el cuarto álbum de estudio de la cantante colombiana Shakira, publicado el 29 de septiembre de 1998 ",
+                "price": 35,
+                "discountPercentage": 10,
+                "stock": 8,
+                "category": ["Rock", "Pop"],
+                "thumbnail": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/09/29131153/Shakira-Donde-estan-los-ladrones.jpg",
+                "images": [
+                ],
+                "quantity": 3
+                },
+                {
+                "id": 9,
+                "title": "Ancient Dreams in a Modern Land ",
+                "description": "Ancient Dreams in a Modern Land es el quinto álbum de estudio de la cantautora británica Marina, publicado mundialmente el 11 de junio de 2021 por el sello discográfico Atlantic Records",
+                "price": 30,
+                "discountPercentage": 10,
+                "stock": 6,
+                "category": "Pop",
+                "thumbnail": "https://www.lahiguera.net/musicalia/artistas/marina_diamandis/disco/11191/marina_diamandis_ancient_dreams_in_a_modern_land-portada.jpg",
+                "images": [
+                ], 
+                "quantity": 2
+                }
+        ]
+    }
+]

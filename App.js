@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import Home from './src/screens/Home.js';
-import ItemListCategories from './src/screens/ItemListCategories.js';
 import {useFonts} from 'expo-font'
 import { StatusBar } from 'expo-status-bar';
-import Navigator from './src/navigation/Navigator.js';
+import TabNavigator from './src/navigation/TabNavigator.js';
+import { store } from './src/app/store.js'
+import { Provider } from 'react-redux'
 
 export default function App() {
 
@@ -16,7 +15,9 @@ export default function App() {
   return (
     <>
     <StatusBar/>
-    <Navigator/>
+    <Provider store={store}>
+      <TabNavigator/>
+    </Provider>
     </>
   );
 }

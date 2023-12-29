@@ -1,18 +1,13 @@
 import { useEffect, useState } from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
-import allVinyls from '../data/vinyls.json'
 import { colors } from '../global/colors'
+import { useSelector } from 'react-redux'
 
 
 const ItemDetail = ({route}) => {
 
-  const {id} = route.params
-  const [vinyl, setVinyl] = useState([])
+const vinyl = useSelector((state) => state.shop.value.productSelected)
 
-  useEffect(() => {
-    const productFound = allVinyls.find((vin) => vin.id === id)
-    setVinyl(productFound)
-  },[id])
   return (
     <View style={styles.container}>
       <Image
