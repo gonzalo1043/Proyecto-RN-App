@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import { colors } from '../global/colors'
-import { useSelector } from 'react-redux'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { addItem } from '../features/cart/cartSlice'
 
 const ItemDetail = ({route}) => {
 
 const vinyl = useSelector((state) => state.shop.value.productSelected)
+
+const dispatch = useDispatch()
 
   return (
     <View style={styles.container}>
@@ -18,7 +20,14 @@ const vinyl = useSelector((state) => state.shop.value.productSelected)
 
       <Text style={styles.title}>{vinyl.title}</Text>
       <Text style={styles.description}>{vinyl.description}</Text>
-      <Text style={styles.price}>${vinyl.price}</Text>
+      <View>
+        <Text style={styles.price}>${vinyl.price}</Text>
+        <Pressable onPress={() => dispatch(addItem(vinyl))}>
+          <Text>Agregar al carrito</Text>
+        </Pressable>
+      </View>
+      
+
     </View>
   )
 }

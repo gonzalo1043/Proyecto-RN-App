@@ -1,34 +1,25 @@
-import React, { useEffect, useState } from 'react';
 import { FlatList, StyleSheet, Text, View, Pressable } from 'react-native';
-import allCart from '../data/cart.json';
 import CartItem from '../components/CartItem';
 import { colors } from '../global/colors';
+import { useSelector } from 'react-redux';
+import { usePostOrdersMutation } from '../app/services/shopServices';
 
 const Cart = () => {
-  const [cartProducts, setCartProducts] = useState([]);
-  const [total, setTotal] = useState(0);
-
-  useEffect(() => {
-    setCartProducts(allCart);
-  }, []);
-
-  useEffect(() => {
-    const total = cartProducts.reduce((acc, product) => acc + product.price * product.quantity, 0);
-    setTotal(total);
-  }, [cartProducts]);
+  const cart = useSelector(state => state.cart.value)
+  const [triggerPostOrder] = usePostOrdersMutation()
 
   return (
     <View style={styles.container}>
       <FlatList
-        data={cartProducts}
+        data={cart.items}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <CartItem item={item} />}
       />
       <View style={styles.footer}>
-        <Pressable style={styles.confirmButton}>
+        <Pressable style={styles.confirmButton} onPress={()=> triggerPostOrder(cart)}>
           <Text style={styles.confirmButtonText}>Confirmar</Text>
         </Pressable>
-        <Text style={styles.totalText}>Total: $ {total}</Text>
+        <Text style={styles.totalText}>Total: $ {cart.total}</Text>
       </View>
     </View>
   );

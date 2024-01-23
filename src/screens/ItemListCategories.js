@@ -3,18 +3,22 @@ import Search from '../components/Search'
 import VinylItem from '../components/VinylItem'
 import { useEffect, useState } from 'react'
 import { colors } from '../global/colors'
-import { useDispatch, useSelector } from 'react-redux'
+import { useGetProductsQuery } from '../app/services/shopServices'
 
 const ItemListCategories = ({navigation, route}) => {
-
-  const productsFilteredByCategory = useSelector(state => state.shop.value.productsFilteredByCategory)
+  const {category} = route.params
+  const {data, isLoading} = useGetProductsQuery(category)
   const [keyword, setKeyword] = useState('')
-  const [vinyls, setVinyls] = useState([])
+  const [vinyls, setVinyls] = useState()
 
   useEffect(() => {
-      const vinylsFiltered = productsFilteredByCategory.filter( v => v.title.includes(keyword))
-    setVinyls(vinylsFiltered)
-  }, [keyword, productsFilteredByCategory])
+    if (!isLoading) {
+
+      const products = Object.values(data)
+      const vinylsFiltered = products.filter( v => v.title.includes(keyword))
+      setVinyls(vinylsFiltered)
+    }
+  }, [keyword, data])
 
   return (
     <>
@@ -40,3 +44,4 @@ const styles = StyleSheet.create({
     backgroundColor: colors.black
   }
 })
+

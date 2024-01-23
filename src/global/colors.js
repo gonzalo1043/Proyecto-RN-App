@@ -3,7 +3,9 @@ export const colors = {
     green: '#6DF29C' ,
     greenLime: '#CCF279' ,
     orange: '#F27141',
-    black: '#0D0D0D'
+    black: '#0D0D0D',
+    grey: '#262523',
+    clearGrey: "#D9D9D9"
 }
 
 

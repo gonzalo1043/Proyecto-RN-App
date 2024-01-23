@@ -9,7 +9,7 @@ const CartItem = ({ item }) => {
       <View style={styles.itemInfo}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.category}>{item.category}</Text>
-        <Text style={styles.price}>${item.price}</Text>
+        <Text style={styles.price}> cantidad: {item.quantity} precio: ${item.price}</Text>
       </View>
       <Feather name="trash" size={24} color={colors.orange} />
     </View>

@@ -12,7 +12,7 @@ const Header = ({ title }) => {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: colors.orange, 
+    backgroundColor: colors.greenLime, 
     padding: 16,
     justifyContent: 'center',
     alignItems: 'center',
