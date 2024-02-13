@@ -12,27 +12,27 @@ Se encuentra compouesto por distintos componentes.
 
 ### Caracteristicas especiales.
 - #### Página de cuenta: 
--_Acceso seguro:_ Solo los usuarios autenticados pueden acceder a la pantalla de perfil y realizar compras. 
--_Información del usuario:_ Muestra detalles del usuario, como nombre y dirección. 
+- _Acceso seguro:_ Solo los usuarios autenticados pueden acceder a la pantalla de perfil y realizar compras. 
+- _Información del usuario:_ Muestra detalles del usuario, como nombre y dirección. 
 - #### Categorías:
 Cuenta con componentes de categoría que ayudarán a encontrar vinilos más fácilmente. Contiene categorías como "Pop" y "Rock", que permiten filtrar el catálogo para ver solo los vinilos de tu género favorito.
 
 ## Herramientas
--react-navigation/bottom-tabs
--react-navigation/native
--react-navigation/native-stack
--reduxjs/toolkit
--expo
--expo-font
--expo-image-picker
--expo-status-bar
--react
--react-native
--react-native-safe-area-context
--react-native-screens
--react-native-uuid
--react-redux
--yup
--expo-file-system
--expo-location
--expo-sqlite
+- react-navigation/bottom-tabs
+- react-navigation/native
+- react-navigation/native-stack
+- reduxjs/toolkit
+- expo
+- expo-font
+- expo-image-picker
+- expo-status-bar
+- react
+- react-native
+- react-native-safe-area-context
+- react-native-screens
+- react-native-uuid
+- react-redux
+- yup
+- expo-file-system
+- expo-location
+- expo-sqlite
