@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../features/auth/authSlice';
 import { signupSchema } from '../validations/signupSchema';
 import { colors } from '../global/colors';
+import { insertSession } from '../db';
 
 const Signup = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -14,11 +15,22 @@ const Signup = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
 
+  
+  useEffect(() => {
+    if (isSuccess) {
+      dispatch(setUser(data));
+      insertSession(data)
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
+    } 
+    if (isError) console.log(error);
+  }, [data, isError, isSuccess]);
+  
+  
   const onSubmit = () => {
     try {
       setEmailError('');
@@ -43,10 +55,6 @@ const Signup = ({ navigation }) => {
     }
   };
 
-  useEffect(() => {
-    if (isSuccess) dispatch(setUser(data));
-    if (isError) console.log(error);
-  }, [data, isError, isSuccess]);
 
   return (
     <ScrollView contentContainerStyle={styles.container}>

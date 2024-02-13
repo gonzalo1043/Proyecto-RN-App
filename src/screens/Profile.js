@@ -1,13 +1,14 @@
 import { StyleSheet, View, Image, TouchableOpacity, Text } from 'react-native';
 import React from 'react';
 import AddButton from '../components/AddButton';
-import { useGetProfileImageQuery } from '../app/services/shopServices';
+import { useGetProfileImageQuery, useGetUserLocationQuery } from '../app/services/shopServices';
 import { useSelector } from 'react-redux';
 import { colors } from '../global/colors';
 
 const Profile = ({ navigation }) => {
   const localId = useSelector(state => state.auth.value.localId);
   const { data } = useGetProfileImageQuery(localId);
+  const {data:location} = useGetUserLocationQuery(localId)
 
   return (
     <View style={styles.container}>
@@ -21,7 +22,11 @@ const Profile = ({ navigation }) => {
         resizeMode='cover'
       />
 
+      <Text>{location?.address}</Text>
+
       <AddButton title='Seleccionar Imagen' onPress={() => navigation.navigate('ImageSelector')} />
+
+      <AddButton title={location ? 'Cambiar ubicacion' : 'Agregar ubicacion'} onPress={() => navigation.navigate('LocationSelector')} />
     </View>
   );
 };

@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../features/auth/authSlice';
 import { colors } from '../global/colors';
+import { insertSession } from '../db';
 
 const Login = ({navigation}) => {
   const dispatch = useDispatch();
@@ -15,7 +16,12 @@ const Login = ({navigation}) => {
   const [password, setPassword] = useState('');
 
   useEffect(() => {
-    if (isSuccess) dispatch(setUser(data));
+    if (isSuccess) {
+      dispatch(setUser(data));
+      insertSession(data)
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
+    } 
     if (isError) console.log(error);
   }, [data, isError, isSuccess]);
 
